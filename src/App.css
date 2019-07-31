@@ -1,11 +1,103 @@
 .App {
   text-align: center;
+  font-family: 'Open Sans',sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+header {
+  box-sizing: border-box;
+  color: rgb(34, 34, 34);
+  cursor: default;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 50px;
+  line-height: 16px;
+  text-size-adjust: 100%;
+  overflow: hidden;
+}
+header .hero {
+  background-color: rgb(30, 50, 71);
+  background-image: linear-gradient(rgba(30, 50, 71, 0.79), rgba(30, 50, 71, 0.79)), url(./hero_ticker_layouts_bg.png);
+  background-position-x: 0px, 50%;
+  background-position-y: 0px, 0px;
+  background-size: auto, 140%;
+  box-sizing: border-box;
+  color: rgb(34, 34, 34);
+  cursor: default;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 221px;
+  line-height: 16px;
+  padding-bottom: 60px;
+  text-size-adjust: 100%;
+  text-align: center;
+}
+header .hero h1 {
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: default;
+  display: inline-block;
+  font-family: Lato, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  height: 40px;
+  letter-spacing: -0.6px;
+  line-height: 40px;
+  margin-block-end: 10px;
+  margin-block-start: 0px;
+  margin-bottom: 10px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  text-size-adjust: 100%;
+
+}
+
+h2 {
+  color: rgb(65, 86, 109);
+  font-size: 14px;
+  font-style: normal;
+  line-height: 32px;
+  margin-block-end: 10px;
+  margin-block-start: 10px;
+  margin-bottom: 10px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 10px;
+  text-decoration-color: rgb(65, 86, 109);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-size-adjust: 100%;
+
+}
+
+main {
+  display: block;
+  width:100%;
+
+}
+
+footer {
+  text-align: center;
+}
+.logo {
+  height: 20px;
+  vertical-align: bottom;
   pointer-events: none;
+  padding-top: 3px;
+  position: absolute;
+  left: 0px;
 }
 
 .App-header {
@@ -23,11 +115,134 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item .grow {
+  color: #0a0;
+}
+.item .down {
+  color: #a00;
+}
+
+
+.arrow {
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
+}
+
+.wrap {
+  line-height: normal;
+  font-size: 12px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.item {
+  width: auto;
+  line-height: 100%;
+  text-align: center;
+  float: left;
+  padding: 8px 0 10px 10px;
+  display: inline;
+}
+
+.item:after {
+  content: "|";
+  display: inline-block;
+  line-height: 100%;
+  height: auto;
+  padding-left: 5px;
+  font-size: 90%;
+
+  margin-top: -3%;
+  opacity: .5;
+  width: auto;
+  max-width: 2px;
+}
+
+.price-change {
+  padding-left: 2px;
+}
+
+
+.box {
+  box-sizing: border-box;
+  height: 30px;
+  margin: 10px auto;
+  overflow: hidden;
+  border: 1px dotted gray;
+}
+
+.name {
+  font-weight: bold;
+}
+
+
+.layout-1 .name {
+  font-weight: normal;
+}
+.layout-2 .price-change {
+  display: none;
+}
+
+.layout-3 .wrap span{
+  display: flex;
+}
+.layout-3  {
+  height: 70px;
+}
+
+.layout-3 .item:after {
+  display: none;
+}
+.layout-3 .logo {
+  padding-top: 18px;
+}
+
+.layout-3 .wrap {
+  display: flex;
+  justify-content: center;
+}
+.layout-3 .wrap .item {
+  margin-right: 10px;
+}
+
+
+
+.layout-5 .wrap span{
+  display: flex;
+}
+.layout-5  {
+  height: 50px;
+}
+.layout-5 .item {
+  padding: 5px;
+}
+
+.layout-5 .item:after {
+  display: none;
+}
+.layout-5 .logo {
+  padding-top: 15px;
+}
+
+.layout-5 .wrap {
+  display: flex;
+  justify-content: center;
+}
+.layout-5 .wrap .item {
+  margin-right: 10px;
+  border-radius: 5px;
+  color: white !important;
+}
+.layout-5 .item.positive {
+  background-color: #77B269;
+}
+.layout-5 .item.negative {
+  background-color: #DD5152;
+}
+
+.layout-5 .item .grow,  .layout-5 .item .down, .layout-5 .item svg line,  .layout-5 .item svg polyline{
+  fill: white;
+  stroke: white !important;
+  color: white;
 }
