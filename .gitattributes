@@ -1,1 +1,8 @@
 build filter=lfs diff=lfs merge=lfs -text
+build/favicon.ico filter=lfs diff=lfs merge=lfs -text
+build/index.html filter=lfs diff=lfs merge=lfs -text
+build/manifest.json filter=lfs diff=lfs merge=lfs -text
+build/precache-manifest.950cc13c0c212e9897a0fcd6f4e94194.js filter=lfs diff=lfs merge=lfs -text
+build/service-worker.js filter=lfs diff=lfs merge=lfs -text
+build/static filter=lfs diff=lfs merge=lfs -text
+build/asset-manifest.json filter=lfs diff=lfs merge=lfs -text
